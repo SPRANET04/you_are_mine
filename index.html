@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6a6c2">
+<title>a little something for you ♡</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div class="grain"></div>
+  <button class="sound-btn" id="soundBtn" aria-label="Toggle sound">♪</button>
+  <div class="progress"><span id="progressBar"></span></div>
+
+  <!-- SCENE 0 : OPENING -->
+  <section class="scene intro active" id="s-intro">
+    <div class="orb orb-a"></div><div class="orb orb-b"></div>
+    <div class="floaters" id="introFloaters"></div>
+    <div class="intro-content">
+      <p class="eyebrow intro-tag" id="introTag">a little something for you...</p>
+      <div style="position:relative;display:inline-block">
+        <div class="heart-glow" id="heartGlow"></div>
+        <h1 class="intro-heart" id="introHeart">♥</h1>
+      </div>
+      <button class="open-btn" id="openBtn"><span class="heart-ic">♥</span> Tap to open</button>
+      <p class="intro-sub" id="introSub">take your time ♡</p>
+    </div>
+  </section>
+
+  <!-- SCENE 1 : ARROW -> HEART (no caption) -->
+  <section class="scene arrow-scene" id="s-arrow">
+    <div class="floaters" id="arrowFloaters"></div>
+    <div class="arrow-stage">
+      <div class="impact-flash" id="impactFlash"></div>
+      <div class="big-heart" id="bigHeart">♥</div>
+      <div class="arrow-icon" id="arrowIcon">➤</div>
+      <div class="burst-hearts" id="burstHearts"></div>
+      <div class="shock-ring" id="shockRing"></div>
+    </div>
+  </section>
+
+  <!-- SCENE 2 : FIRST PHOTO REVEAL -->
+  <section class="scene photo-scene" id="s-photo1">
+    <div class="photo-wrap">
+      <img src="assets/photo-06.jpg" alt="A special photo" id="photo1Img">
+      <div class="photo-shade" id="photo1Shade"></div>
+      <div class="sparkle-layer" id="photo1Sparkle">✦ · ✧ · ✦</div>
+      <div class="photo-copy">
+        <p class="eyebrow light">certified cutie patootie</p>
+        <h2 id="photo1Heading">ye chehra dekh ke duniya <em>ruk jaati</em> hai. ♡</h2>
+        <p class="sub">tumhe dekhna kabhi purana nahi lagta.</p>
+      </div>
+    </div>
+    <button class="next-btn" data-next="s-mine">Next <span>→</span></button>
+  </section>
+
+  <!-- SCENE 3 : YOU ARE MINE -->
+  <section class="scene mine-scene" id="s-mine">
+    <div class="floaters" id="mineFloaters"></div>
+    <div class="mine-content shake-target" id="mineShakeTarget">
+      <p class="eyebrow light" style="opacity:0" id="mineTag">just for you</p>
+      <h1 class="mine-title">
+        <span class="mine-word" id="wordYou">YOU</span><br>
+        <span class="mine-word" id="wordAre">ARE</span><br>
+        <span class="mine-word mine-em shimmer-sweep" id="wordMine">MINE</span>
+      </h1>
+      <div class="mine-underline-wrap">
+        <svg viewBox="0 0 120 14"><path id="underlinePath" d="M4 8 Q 30 2, 60 8 T 116 7"/></svg>
+      </div>
+      <p class="mine-sub" id="mineSubText">because some people are simply special.</p>
+    </div>
+  </section>
+
+  <!-- SCENE 4 : YOU'RE CUTE -->
+  <section class="scene cute-scene" id="s-cute">
+    <div class="floaters" id="cuteFloaters"></div>
+    <div class="confetti" id="cuteConfetti"></div>
+    <article class="cute-card" id="cuteCard">
+      <div class="cute-photo-orb" id="cutePhotoOrb">
+        <div class="cute-photo-ring"></div>
+        <img src="assets/photo-09.jpg" alt="The sweetest little look" id="cutePhoto">
+        <div class="finger-heart-burst" id="cuteFingerBurst"></div>
+        <span class="cute-photo-badge">♡ cutie</span>
+      </div>
+      <p class="eyebrow" id="cuteTag">🥹 honestly...</p>
+      <h2 class="cute-title" id="cuteTitle">You're cute.</h2>
+      <p class="cute-sub" id="cuteSub">But sometimes you're also a tiny headache. 😭😅</p>
+      <p class="cute-fine" id="cuteFine">Still... you're one of my favourite people.</p>
+      <div class="mini-hearts" id="cuteHearts"><span>♡</span><span>♡</span><span>♡</span></div>
+    </article>
+    <button class="next-btn" data-next="s-photo-magic">Next <span>→</span></button>
+  </section>
+
+  <!-- SCENE 4.5 : PHOTO MAGIC -->
+  <section class="scene photo-magic-scene" id="s-photo-magic">
+    <div class="photo-magic-stars"></div>
+    <div class="photo-magic-card" id="photoMagicCard">
+      <div class="photo-magic-frame">
+        <img src="assets/photo-09.jpg" alt="A sweet little memory">
+        <div class="photo-magic-burst" id="photoMagicBurst"></div>
+      </div>
+      <div class="photo-magic-copy">
+        <p class="eyebrow">one more look...</p>
+        <h2>itna cute hona <em>allowed</em> hai? ♡</h2>
+        <p>Bas tumhara ye little pose aur dil ke bubbles... phir main kaise normal rahun? 🥹</p>
+      </div>
+    </div>
+    <div class="magic-hint">tap the photo for a little heart shower ✦</div>
+    <button class="next-btn" data-next="s-proposal">Keep going <span>→</span></button>
+  </section>
+
+  <!-- SCENE 5 : WILL YOU BE MINE -->
+  <section class="scene proposal" id="s-proposal">
+    <div class="floaters" id="proposalFloaters"></div>
+    <p class="eyebrow" id="propTag" style="position:relative;z-index:3;opacity:0">a small question</p>
+    <h2 class="proposal-title" id="propTitle">Will you be <em>mine</em>?</h2>
+    <p class="proposal-sub" id="propSub">sirf ek hi honest jawab hai yahan par... 👀</p>
+    <div class="proposal-buttons" id="propButtons">
+      <button class="btn-yes" id="btnYes">Yes</button>
+      <button class="btn-no" id="btnNo">No</button>
+    </div>
+
+    <div class="muah-overlay" id="muahOverlay">
+      <article class="muah-card">
+        <p class="muah-kicker">please be mine</p>
+        <div class="muah-photo-frame">
+          <img src="assets/photo-08-muah.jpg" alt="Muah">
+          <span class="muah-mini-heart">♥</span>
+        </div>
+        <p class="muah-text">*Muah*</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SCENE 6 : TRUTH -->
+  <section class="scene truth-scene" id="s-truth">
+    <div class="floaters" id="truthFloaters"></div>
+    <p class="eyebrow" id="truthTag" style="opacity:0">just one question</p>
+    <div class="truth-love-lines" id="truthLoveLines"><span>I love you ♥</span><span>I miss you ♡</span></div>
+    <h2 class="truth-title truth-title-big" id="truthTitle">do you love me? <em>🥺</em></h2>
+    <div class="truth-pulse" id="truthPulse">♥</div>
+    <div class="truth-buttons" id="truthButtons"><button class="btn-yes truth-btn" id="btnTruthYes">Yes</button><button class="btn-no truth-no" id="btnTruthNo">No</button></div>
+  </section>
+
+
+  <!-- SCENE 7 : GIFT REVEAL -->
+  <section class="scene gift-scene" id="s-gift">
+    <div class="floaters" id="giftFloaters"></div>
+    <div class="gift-aura"></div>
+    <div class="gift-content">
+      <p class="eyebrow" id="giftTag">a tiny surprise inside</p>
+      <div class="gift-box-wrap" id="giftBoxWrap" role="button" tabindex="0" aria-label="Open the gift">
+        <div class="gift-lid"><span></span></div>
+        <div class="gift-box"><div class="gift-ribbon-v"></div><div class="gift-ribbon-h"></div></div>
+        <div class="gift-glow"></div>
+      </div>
+      <h2 id="giftTitle">something made <em>just for you</em> ♡</h2>
+      <p id="giftSub">tap the little gift and let the next memory unfold.</p>
+      <button class="next-btn gift-next" id="giftNext" data-next="s-memories">Open my surprise <span>→</span></button>
+    </div>
+  </section>
+
+  <!-- SCENE 8 : SWEETEST LITTLE MEMORIES -->
+  <section class="scene memories-scene" id="s-memories">
+    <div class="memories-glow"></div>
+    <div class="memories-head">
+      <p class="eyebrow" id="memTag">a few favourites</p>
+      <h2 id="memTitle">sweetest little <em>memories</em> ♡</h2>
+      <p id="memSub">some moments deserve their own little wall.</p>
+    </div>
+    <div class="memory-grid" id="memoryGrid">
+      <figure><img src="assets/photo-02.jpg" alt=""><figcaption>that little smile ♡</figcaption></figure>
+      <figure><img src="assets/photo-07.jpg" alt=""><figcaption>one for the heart</figcaption></figure>
+      <figure><img src="assets/photo-03.jpg" alt=""><figcaption>soft moments</figcaption></figure>
+      <figure><img src="assets/photo-05.jpg" alt=""><figcaption>still my favourite</figcaption></figure>
+    </div>
+    <div class="memory-count">04 / little moments</div>
+    <button class="next-btn" data-next="s-queen">Keep going <span>→</span></button>
+  </section>
+
+  <!-- SCENE 9 : THIS PHOTO FELT LIKE -->
+  <section class="scene felt-scene" id="s-felt">
+    <div class="felt-bg"></div>
+    <div class="felt-card" id="feltCard">
+      <div class="felt-photo-wrap"><img src="assets/photo-02.jpg" alt="A favourite memory"></div>
+      <div class="felt-copy">
+        <p class="eyebrow">this photo felt like...</p>
+        <h2>a quiet little <em>forever.</em></h2>
+        <p>Bas ek normal sa pal tha, lekin pata nahi kyun — isme tum kuch zyada hi khoobsurat lagti ho. ♡</p>
+        <div class="felt-sign">keep this one close ✦</div>
+      </div>
+    </div>
+    <button class="next-btn" data-next="s-note">There's more <span>→</span></button>
+  </section>
+
+  <!-- SCENE 10 : LOVE NOTE -->
+  <section class="scene note-scene" id="s-note">
+    <div class="note-particles" id="noteParticles"></div>
+    <article class="note-paper" id="notePaper">
+      <p class="eyebrow">from my heart</p>
+      <h2>for the girl who makes ordinary days feel <em>special.</em></h2>
+      <p class="note-body">Thank you for the smiles, the silly conversations, the little moments and even the tiny fights. Tumhari presence kabhi loud nahi hoti, phir bhi somehow sab kuch thoda better lagne lagta hai.</p>
+      <p class="note-body">Agar kabhi tumhe lage ki tum ordinary ho, ye page dobara dekh lena. Mere liye tumhari smile, tumhari aankhein aur tumhari chhoti-chhoti baatein already enough hain.</p>
+      <div class="note-divider">♡ &nbsp; ♡ &nbsp; ♡</div>
+      <p class="note-footer">made for one very special person.</p>
+    </article>
+    <button class="next-btn" data-next="s-again">One last look <span>→</span></button>
+  </section>
+
+  <!-- CHECKLIST REMOVED: the flow now continues directly to the final photo sequence -->
+
+  <!-- SCENE 7 : QUEEN CARD FLIP STACK -->
+  <section class="scene queen-scene" id="s-queen">
+    <div class="queen-glitter" id="queenGlitter"></div>
+    <div class="queen-head">
+      <div class="queen-crown" id="queenCrown">👑</div>
+      <h2 class="queen-title" id="queenTitle">my <em>queen</em> ♕</h2>
+    </div>
+    <div class="queen-spotlight" id="queenSpotlight">
+      <div class="queen-card-back back-one"></div><div class="queen-card-back back-two"></div>
+      <div class="card-stack-wrap" id="cardStack"></div>
+      <div class="queen-photo-glow"></div><div class="queen-photo-sheen"></div>
+    </div>
+    <div class="queen-caption" id="queenCaption"></div>
+    <div class="queen-dots" id="queenDots"></div>
+    <p class="queen-hint" id="queenHint">tap the photo • another beautiful memory is waiting ♡</p>
+    <button class="next-btn" data-next="s-gallery">Next <span>→</span></button>
+  </section>
+
+  <!-- SCENE 8 : POLAROID GALLERY -->
+  <section class="scene gallery-scene" id="s-gallery">
+    <div class="floaters" id="galleryFloaters"></div>
+    <div class="gallery-head">
+      <div class="gallery-ribbon">♡ our memories ♡</div>
+      <p class="eyebrow" id="galTag" style="opacity:0">kuch pal, kuch yaadein ♡</p>
+      <h2 class="gallery-title" id="galTitle">our little <em>memory wall</em> ♡</h2>
+      <p class="gallery-subtitle" id="galSub">har tasveer mein ek chhoti si kahani hai</p>
+      <div class="gallery-counter" id="galCounter">8 little memories • tap any photo</div>
+    </div>
+    <svg class="heart-string" id="heartString"></svg>
+    <div class="polaroid-field" id="polaroidField"></div>
+    <button class="next-btn" data-next="s-photo-orbit">Next <span>→</span></button>
+  </section>
+
+  <!-- SCENE 11.5 : PHOTO ORBIT -->
+  <section class="scene photo-orbit-scene" id="s-photo-orbit">
+    <div class="orbit-bg-heart">♥</div>
+    <p class="eyebrow orbit-eyebrow">three little reasons to smile</p>
+    <h2 class="orbit-title">a few more <em>versions of you</em> ♡</h2>
+    <div class="photo-orbit" id="photoOrbit">
+      <div class="orbit-photo orbit-a"><img src="assets/photo-05.jpg" alt="Memory one"></div>
+      <div class="orbit-photo orbit-b"><img src="assets/photo-06.jpg" alt="Memory two"></div>
+      <div class="orbit-photo orbit-c"><img src="assets/photo-09.jpg" alt="Memory three"></div>
+      <div class="orbit-center">♡<span>still my favourite</span></div>
+    </div>
+    <p class="orbit-caption" id="orbitCaption">soft smile • pretty eyes • little attitude</p>
+    <button class="next-btn" data-next="s-felt">There's more <span>→</span></button>
+  </section>
+
+  <!-- SCENE 8.5 : ONE MORE LOOK -->
+  <section class="scene again-scene photo-scene" id="s-again">
+    <div class="photo-wrap">
+      <img src="assets/photo-04.jpg" alt="One more look" id="againImg">
+      <div class="photo-shade" id="againShade"></div>
+      <div class="sparkle-layer" id="againSparkle">✦ · ✧ · ✦</div>
+      <div class="photo-copy">
+        <h2 id="againHeading">tumne dekha hai sirf aankho ko,<br><em>tumne aankho main kaha dekha hai.</em> ♡</h2>
+      </div>
+    </div>
+    <button class="next-btn" data-next="s-letter">Next <span>→</span></button>
+  </section>
+
+  <!-- SCENE 9 : FINAL LETTER -->
+  <section class="scene letter" id="s-letter">
+    <div class="floaters" id="letterFloaters"></div>
+    <article class="letter-card" id="letterCard">
+      <div class="heart-ring" id="heartRing"></div>
+      <div class="letter-photo-wrap" id="letterPhotoWrap">
+        <img src="assets/photo-09.jpg" alt="One last sweet memory">
+        <div class="finger-heart-burst final-finger-burst" id="letterFingerBurst"></div>
+        <span>♡</span>
+      </div>
+      <p class="eyebrow letter-eyebrow" id="letterTag">one last thing...</p>
+      <h2 id="letterHeading">You're special.</h2>
+      <div class="final-heart" id="finalHeart">♥</div>
+      <p class="letter-text" id="letterText">
+        Tumhari smile, tumhari funny si baatein, tumhari little-little habits —
+        Kabhi cute, kabhi pagal, kabhi annoying 😂,
+        lekin har memory apni jagah special hai.
+      </p>
+      <p class="final-line" id="finalLine">Stay exactly the way you are. ✨</p>
+      <p class="letter-signature" id="letterSignature">— always yours ♡</p>
+      <div class="final-actions-label">one last choice, from you ♡</div>
+      <div class="letter-btns" id="letterBtns">
+        <button class="reply-btn" id="replyBtn" type="button"><span>💌</span> Reply</button>
+        <button class="replay-btn" id="replayBtn" type="button"><span>↻</span> Replay</button>
+      </div>
+      <p class="reply-text" id="replyText" aria-live="polite"></p>
+      <p class="reply-hint">Reply for a little surprise · Replay to relive it all</p>
+    </article>
+  </section>
+
+</div>
+<div class="toast" id="toast">made with a ridiculous amount of love ♡</div>
+<script src="script.js"></script>
+</body>
+</html>
